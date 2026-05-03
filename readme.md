@@ -3,7 +3,8 @@
 A 10-question web development quiz with score tracking and result screen.
 
 ## Preview
-![Quiz App](quiz.png)
+![Quiz App](quiz1.png)
+![Quiz App](quiz2.png)
 
 ## Features
 - 10 web development questions
