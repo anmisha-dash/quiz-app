@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page">
+    <h1 class="heading">Quiz App</h1>
+    <p class="subheading">Test your web development knowledge!</p>
+
+    <div class="card" id="quizCard">
+
+      <!-- progress -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text">
+        <span id="questionNum">Question 1 of 10</span>
+        <span id="scoreText">Score: 0</span>
+      </div>
+
+      <!-- question -->
+      <div class="question-box">
+        <p class="question" id="question">Loading...</p>
+      </div>
+
+      <!-- options -->
+      <div class="options" id="options"></div>
+
+      <!-- next button -->
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()" style="display:none">
+        Next →
+      </button>
+
+    </div>
+
+    <!-- result card -->
+    <div class="card result-card" id="resultCard" style="display:none">
+      <div class="result-emoji" id="resultEmoji">🎉</div>
+      <h2 class="result-title" id="resultTitle">Great Job!</h2>
+      <p class="result-score" id="resultScore">You scored 8 out of 10</p>
+      <p class="result-msg" id="resultMsg">Excellent performance!</p>
+      <div class="result-stats">
+        <div class="stat-box correct-box">
+          <span class="stat-num" id="correctCount">0</span>
+          <span class="stat-label">Correct</span>
+        </div>
+        <div class="stat-box wrong-box">
+          <span class="stat-num" id="wrongCount">0</span>
+          <span class="stat-label">Wrong</span>
+        </div>
+        <div class="stat-box percent-box">
+          <span class="stat-num" id="percentCount">0%</span>
+          <span class="stat-label">Score</span>
+        </div>
+      </div>
+      <button class="restart-btn" onclick="restartQuiz()">Play Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

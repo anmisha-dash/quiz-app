@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.page {
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* progress */
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7F77DD;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  width: 10%;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+#scoreText {
+  font-weight: 600;
+  color: #7F77DD;
+}
+
+/* question */
+.question-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: #7F77DD;
+  background: #EEEDFE;
+  color: #534AB7;
+}
+
+.option-btn.correct {
+  background: #E1F5EE;
+  border-color: #1D9E75;
+  color: #0F6E56;
+}
+
+.option-btn.wrong {
+  background: #FAECE7;
+  border-color: #D85A30;
+  color: #993C1D;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+.option-letter {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #374151;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.option-btn.correct .option-letter {
+  background: #1D9E75;
+  color: #ffffff;
+}
+
+.option-btn.wrong .option-letter {
+  background: #D85A30;
+  color: #ffffff;
+}
+
+/* next btn */
+.next-btn {
+  width: 100%;
+  padding: 12px;
+  background: #7F77DD;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.next-btn:hover {
+  background: #534AB7;
+}
+
+/* result card */
+.result-card {
+  text-align: center;
+}
+
+.result-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.result-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.result-score {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.result-msg {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.correct-box { background: #E1F5EE; }
+.wrong-box   { background: #FAECE7; }
+.percent-box { background: #EEEDFE; }
+
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.correct-box .stat-num { color: #0F6E56; }
+.wrong-box   .stat-num { color: #993C1D; }
+.percent-box .stat-num { color: #534AB7; }
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.restart-btn {
+  width: 100%;
+  padding: 12px;
+  background: #7F77DD;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.restart-btn:hover {
+  background: #534AB7;
+}
